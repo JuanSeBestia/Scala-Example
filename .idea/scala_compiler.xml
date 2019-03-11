@@ -2,5 +2,8 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <profile name="sbt 1" modules="Example1,example1_6729" />
+    <profile name="sbt 2" modules="progfun1-example">
+      <option name="deprecationWarnings" value="true" />
+    </profile>
   </component>
 </project>

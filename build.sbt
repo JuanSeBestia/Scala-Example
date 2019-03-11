@@ -1,7 +1,18 @@
-name := "Example1"
+name := course.value + "-" + assignment.value
 
-version := "0.1"
+scalaVersion := "2.11.12"
 
-scalaVersion := "2.11.8"
+scalacOptions ++= Seq("-deprecation")
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
+// grading libraries
+libraryDependencies += "junit" % "junit" % "4.10" % Test
+
+// for funsets
+libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4"
+
+// include the common dir
+commonSourcePackages += "common"
+
+courseId := "bRPXgjY9EeW6RApRXdjJPw"
+
+mainClass := Some("example.Lists")
