@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ScalaProjectSettings">
+    <option name="autoRunDelay" value="905" />
+    <option name="outputLimit" value="50" />
+  </component>
   <component name="WorksheetDefaultProjectSettings">
     <option name="compilerProfileName" value="Default" />
+    <option name="interactive" value="true" />
+    <option name="makeBeforeRun" value="true" />
     <option name="moduleName" value="progfun1-recfun" />
   </component>
 </project>
