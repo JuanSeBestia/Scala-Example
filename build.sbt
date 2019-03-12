@@ -15,4 +15,3 @@ commonSourcePackages += "common"
 
 courseId := "bRPXgjY9EeW6RApRXdjJPw"
 
-mainClass := Some("example.Lists")
