@@ -3,9 +3,9 @@ package week4
 trait Expr {
   // Classification
 
-  def isNumber: Boolean
-
-  def isSum: Boolean
+  //  def isNumber: Boolean
+  //
+  //  def isSum: Boolean
 
   // Accessor
   def numValue: Int
@@ -15,20 +15,16 @@ trait Expr {
   def rightOp: Expr
 
   def eval(e: Expr): Int = {
-    if (e.isNumber) e.numValue
-    else if (e.isSum) eval(e.leftOp) + eval(e.rightOp)
+    if (e.isInstanceOf[Number]) e.numValue
+    else if (e.isInstanceOf[Sum])
+      eval(e.asInstanceOf[Sum].leftOp) +
+        eval(e.asInstanceOf[Sum].rightOp)
     else throw new Error("Unknown expression" + e)
   }
 
 }
 
 class Number(n: Int) extends Expr {
-  // Classification
-
-  def isNumber: Boolean = true
-
-  def isSum: Boolean = false
-
   // Accessor
   def numValue: Int = n
 
@@ -39,12 +35,6 @@ class Number(n: Int) extends Expr {
 }
 
 class Sum(e1: Expr, e2: Expr) extends Expr {
-  // Classification
-
-  def isNumber: Boolean = false
-
-  def isSum: Boolean = true
-
   // Accessor
   def numValue: Int = throw new Error("Sum.numValue")
 
