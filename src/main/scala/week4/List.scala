@@ -31,7 +31,7 @@ object List {
   // List(1,2) == List.apply(1,2)
   def apply[T](x1: T, x2: T): List[T] = new Const[T](x1, new Const[T](x2, Nil))
 
-  def apply[T](): List[T] = new Nil[T]
+  def apply[T](): List[T] = Nil
 }
 
 object test {
